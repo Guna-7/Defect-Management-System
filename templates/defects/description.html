@@ -1,0 +1,38 @@
+{% extends 'defects/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{ defect.defect_name }}</h1>
+        <br>
+        <h6>Description : {{ defect.description }}</h6>
+        <h6>Priority : {{ defect.priority }}</h6>
+        <br>
+        <p style="text-align: justify; text-indent: 5%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis beatae, est unde ullam, numquam doloribus quis dicta adipisci cupiditate minus aliquid! Possimus, quas. Iste numquam harum sequi possimus, blanditiis assumenda.
+            Dolore minima aliquam ipsam deserunt inventore, eligendi maxime maiores aperiam quaerat ut placeat fugit itaque facilis explicabo, hic alias ullam pariatur id optio? Autem in praesentium obcaecati ducimus nihil natus.
+            Suscipit quae velit accusamus unde nulla, porro aliquam necessitatibus minus officia quis reiciendis quo dolorum delectus recusandae atque sit, autem nisi beatae sapiente vel modi repellat! Libero sed tenetur architecto.
+            Deleniti esse culpa modi! Nulla quam mollitia commodi incidunt. Sapiente consequuntur tenetur velit dicta possimus iure commodi a eius minus! Beatae dolores porro ea rem earum saepe impedit incidunt id.
+            Est, recusandae praesentium quae velit molestiae vitae dignissimos quos, quis libero illum fuga sequi odio, quam consequuntur vero! Fugiat nobis culpa necessitatibus, dicta nostrum est quo nam molestias quae! Labore!
+            Quibusdam aperiam omnis exercitationem mollitia obcaecati cupiditate dolorem quod ullam pariatur corporis suscipit molestiae unde, quia fugit natus excepturi placeat, autem tenetur animi explicabo. Praesentium inventore voluptates provident dolorum aliquid!
+            Voluptas commodi quo, molestiae esse eos mollitia temporibus amet, aut molestias ullam cum, facere cupiditate iusto officia possimus! Hic cumque ea autem fugit laudantium sequi sunt, facere quae nam porro.
+            Vel, temporibus ab incidunt soluta cumque, magni quaerat dolor eaque dignissimos aperiam odio natus ratione voluptatibus doloribus maxime. Quod inventore eligendi temporibus fugit, mollitia similique quasi voluptatum magnam. Eum, recusandae!
+            Sequi quis sapiente itaque, nobis voluptatibus dolorem fugiat recusandae aperiam saepe placeat a fuga nam voluptate ullam consectetur tempora illo qui? Fugit, et eos corporis provident alias est voluptates impedit.
+            Explicabo tenetur architecto voluptatibus a dicta. Optio, provident minima. Neque molestias tempora iusto dignissimos adipisci consequatur non corrupti voluptatem tenetur ullam dolor soluta odio impedit odit corporis at, labore temporibus.</p>
+
+        <div class="row">
+            {% for i in defect1 %}
+            <div class="col-md-6">
+                <div class="card card-body" style="align-items: center;">
+                    {% if i.defect_img %}
+                        <img src="{{ i.defect_img.url }}" alt="No  img">
+                    {% else %}
+                        <p>No image is present</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

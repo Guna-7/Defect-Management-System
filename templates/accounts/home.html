@@ -1,0 +1,30 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Home | MyApp{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card text-center p-4">
+        
+        <!-- Username + Profile Picture Row -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <h1 class="mb-0 text-secondary me-3">Welcome, {{ user.username }} 👋</h1>
+            
+            {% if user.userdata.profile_pic %}
+                <img src="{{ user.userdata.profile_pic.url }}" 
+                     alt="Profile Picture" 
+                     class="rounded-circle shadow-sm border" 
+                     style="width: 120px; height: 120px; object-fit: cover;">
+            {% else %}
+                <span class="text-muted fst-italic">No image</span>
+            {% endif %}
+        </div>
+
+        <p class="lead">You’ve successfully logged in to <strong>MyApp</strong>.</p>
+        
+        <hr>
+
+        <a href="{% url 'alldefects' %}" class="btn btn-primary btn-lg px-4 py-2 shadow-sm rounded-pill">
+            🚀 View Defects
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+    <br>
+    <center>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 style="text-decoration: underline;">Reset Password Here</h1>
+                <br>
+                <div class="row" style="width: 400px; text-align: start;">
+                    <div class="card card-body">
+                        <form action="{% url 'forgot' %}" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="submit" class="btn btn-primary" value="RESET PASSWORD">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}

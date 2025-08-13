@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MyApp{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- ========== Navbar ========== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="{% url 'home' %}">MyApp</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            
+            {% if user.is_authenticated %}
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'alldefects' %}">AllDefects</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'completed_defects' %}">Completed</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'pending_defects' %}">Pending</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center text-white">
+                    <span class="me-2">Welcome, {{ user.username }}</span>
+                    <i class="fa-solid fa-user-circle fa-lg"></i>
+                </div>
+                <a href="{% url 'logout' %}" class="btn btn-outline-light ms-3">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-outline-light me-2">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+ {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} mt-3 mx-3" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+
+<!-- ========== Main Page Content ========== -->
+<main class="container my-5 flex-grow-1">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- ========== Footer ========== -->
+<footer class="bg-dark text-white py-3 mt-auto">
+    <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Developed by Gun@ All rights reserved.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-github fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

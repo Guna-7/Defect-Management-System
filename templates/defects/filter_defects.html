@@ -1,0 +1,13 @@
+{% extends 'defects/base.html' %}
+{% block content %}
+<div class='container'>
+    <div class = 'jumbotron'>
+      <center>  <form method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type = "submit" class = 'btn btn-primary'value ="search">
+        </form>
+    </center>
+    </div>
+</div>
+{% endblock%}
