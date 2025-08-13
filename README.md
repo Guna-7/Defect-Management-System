@@ -33,7 +33,7 @@ Built with **Django**, this system enables **teams** to log, assign, and resolve
 ---
 
 ## 📂 Project Structure
-```plaintext
+
 Defect_management_system/
 │── defects/           # Main app
 │── static/            # CSS, JS, images
