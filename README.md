@@ -1,26 +1,47 @@
-# 🛠️ Defect Management System
+# 🐞 Defect Management System
 
-A professional web-based system for tracking, managing, and resolving defects efficiently.  
-Built using **Django** for the backend and **Bootstrap** for a clean, responsive frontend.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
+![Django](https://img.shields.io/badge/Django-5.x-green.svg)
+![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+
+A **full-stack web application** for tracking and managing software defects efficiently.  
+Built with **Django**, this system enables **teams** to log, assign, and resolve defects in a structured workflow.
 
 ---
 
 ## 📌 Features
-- User authentication & role-based access
-- Add, update, and track defects
-- Dashboard for quick insights
-- Search & filter functionality
-- Mobile-friendly UI
+- **Role-based access** (Manager, Developer)
+- **Create, view, and update defects**
+- **Status tracking**: Pending, In-Progress, Resolved
+- **Search and filter defects**
+- **Responsive UI** with Bootstrap 5
+- **Database** sqlite3
+- **nontification** Email notifications on defect assignment
 
 ---
 
-## 🚀 Tech Stack
-- **Backend:** Django (Python)
-- **Frontend:** HTML, CSS, Bootstrap
-- **Database:** SQLite / MySQL
-- **Version Control:** Git & GitHub
+## 🛠 Tech Stack
+| Technology | Purpose |
+|------------|---------|
+| Python     | Backend logic |
+| Django     | Web framework |
+| sqlite3    | Database |
+| HTML, CSS, Bootstrap | Frontend styling |
+| Git & GitHub | Version control |
 
 ---
+
+## 📂 Project Structure
+```plaintext
+Defect_management_system/
+│── defects/           # Main app
+│── static/            # CSS, JS, images
+│── templates/         # HTML templates
+│── screenshots/       # App screenshots
+│── manage.py
+│── README.md
+
 
 ## 📷 Screenshots
 
@@ -30,25 +51,34 @@ Built using **Django** for the backend and **Bootstrap** for a clean, responsive
 ![Login Page](screenshots/Screenshot%202025-08-13%20232542.png)
 
 ### 2️⃣ Dashboard View  
-![Dashboard](screenshots/Screenshot_2025-08-13_232609.png)
+![Dashboard](screenshots/Screenshot%202025-08-13%20232609.png)
 
 ### 3️⃣ All Defects List  
-![All Defects](screenshots/Screenshot_2025-08-13_232633.png)
+![All Defects](screenshots/Screenshot%202025-08-13%20232633.png)
 
 ### 4️⃣ Pending Defects Page  
-![Pending Defects](screenshots/Screenshot_2025-08-13_232653.png)
+![Pending Defects](screenshots/Screenshot%202025-08-13%20232653.png)
 
 ### 5️⃣ Add Defect Form  
-![Add Defect](screenshots/Screenshot_2025-08-13_232708.png)
+![Add Defect](screenshots/Screenshot%202025-08-13%20232708.png)
 
 ### 6️⃣ Completed Defects Page  
-![Completed Defects](screenshots/Screenshot_2025-08-13_232721.png)
+![Completed Defects](screenshots/Screenshot%202025-08-13%20232721.png)
 
 ---
-
-## ⚙️ Installation
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/Guna-7/Defect-Management-System.git
-   cd Defect-Management-System
+🚀 Getting Started
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/Defect_management_system.git
+cd Defect_management_system
+2️⃣ Create & Activate Virtual Environment
+bash
+Copy
+Edit
+python -m venv env
+# Windows
+env\Scripts\activate
+# Mac/Linux
+source env/bin/activate
