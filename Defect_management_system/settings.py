@@ -78,7 +78,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'btmpy1.urls'
+ROOT_URLCONF = 'Defect_management_system.urls'
 
 TEMPLATES = [
     {
@@ -94,8 +94,9 @@ TEMPLATES = [
         },
     },
 ]
+WSGI_APPLICATION = 'Defect_management_system.wsgi.application'
 
-WSGI_APPLICATION = 'btmpy1.wsgi.application'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Defect_management_system.settings')
 
 
 # Database
