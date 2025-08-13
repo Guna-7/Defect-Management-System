@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
 ![Django](https://img.shields.io/badge/Django-5.x-green.svg)
-![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)
+![Database](https://img.shields.io/badge/Database-sqlite3-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
 A **full-stack web application** for tracking and managing software defects efficiently.  
