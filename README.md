@@ -27,7 +27,7 @@ Built using **Django** for the backend and **Bootstrap** for a clean, responsive
 > Below are some screenshots showcasing the application's main features and UI.
 
 ### 1️⃣ Login Page  
-![Login Page](screenshots/Screenshot_2025-08-13_232542.png)
+![Login Page](screenshot/Screenshot 2025-08-13 232542.png)
 
 ### 2️⃣ Dashboard View  
 ![Dashboard](screenshots/Screenshot_2025-08-13_232609.png)
