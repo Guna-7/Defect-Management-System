@@ -67,12 +67,14 @@ Defect_management_system/
 
 ---
 🚀 Getting Started
+
 1️⃣ Clone the Repository
 bash
 Copy
 Edit
 git clone https://github.com/yourusername/Defect_management_system.git
 cd Defect_management_system
+
 2️⃣ Create & Activate Virtual Environment
 bash
 Copy
